@@ -7,13 +7,38 @@ import { Button } from '@/components/ui/button'
 export default function Hero() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email) {
-      setSubmitted(true)
-      setEmail('')
-      setTimeout(() => setSubmitted(false), 3000)
+    if (!email) return
+
+    setLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch('https://formspree.io/f/xykdnaae', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+        setEmail('')
+        setTimeout(() => setSubmitted(false), 3000)
+      } else {
+        setError('Something went wrong. Please try again.')
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -52,17 +77,19 @@ export default function Hero() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 rounded-none border border-foreground bg-card px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+              disabled={loading}
+              className="flex-1 rounded-none border border-foreground bg-card px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50"
             />
             <Button
               type="submit"
-              className="rounded-none bg-accent px-6 py-3 font-bold text-accent-foreground hover:bg-accent/90 h-auto"
+              disabled={loading}
+              className="rounded-none bg-accent px-6 py-3 font-bold text-accent-foreground hover:bg-accent/90 h-auto disabled:opacity-50"
             >
-              Join Beta
+              {loading ? 'Loading...' : 'Join Beta'}
             </Button>
           </div>
           <p className="text-sm text-muted">
-            {submitted ? 'Thanks for signing up!' : 'Be the first to try Thinkkr'}
+            {submitted ? 'Thanks for signing up!' : error ? error : 'Be the first to try Thinkkr'}
           </p>
         </form>
       </div>
