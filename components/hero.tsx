@@ -85,7 +85,7 @@ export default function Hero() {
               disabled={loading}
               className="rounded-none bg-accent px-6 py-3 font-bold text-accent-foreground hover:bg-accent/90 h-auto disabled:opacity-50"
             >
-              {loading ? 'Loading...' : 'Join Beta'}
+              {loading ? 'Loading...' : 'Join Waitlist'}
             </Button>
           </div>
           <p className="text-sm text-muted">
