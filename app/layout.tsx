@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Thinker - Replace Brain Rot with Intellectual Identity',
-  description: 'Earn scroll time by thinking. Block addictive apps and build a portfolio of your ideas. Join the Thinker beta waitlist.',
+  title: 'Thinkkr - Replace Brain Rot with Intellectual Identity',
+  description: 'Earn scroll time by thinking. Block addictive apps and build a portfolio of your ideas. Join the Thinkkr beta waitlist.',
   generator: 'v0.app',
   icons: {
     icon: [

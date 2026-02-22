@@ -24,8 +24,8 @@ export default function Hero() {
         <div className="mb-8 flex justify-center">
           <div className="relative h-16 w-16 md:h-20 md:w-20">
             <Image
-              src="/thinker-logo.png"
-              alt="Thinker logo"
+              src="/thinkkr-logo.png"
+              alt="Thinkkr logo"
               fill
               className="object-contain"
               priority
@@ -62,7 +62,7 @@ export default function Hero() {
             </Button>
           </div>
           <p className="text-sm text-muted">
-            {submitted ? 'Thanks for signing up!' : 'Be the first to try Thinker'}
+            {submitted ? 'Thanks for signing up!' : 'Be the first to try Thinkkr'}
           </p>
         </form>
       </div>
