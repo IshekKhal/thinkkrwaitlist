@@ -26,7 +26,7 @@ export default function Solution() {
             The Solution
           </p>
           <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl text-balance">
-            Thinker blocks your apps. But here's what we give you instead.
+            Thinkkr blocks your apps. But here's what we give you instead.
           </h2>
         </div>
 

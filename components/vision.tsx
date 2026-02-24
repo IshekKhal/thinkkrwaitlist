@@ -18,7 +18,7 @@ export default function Vision() {
                 What if you spent those hours building something that's actually YOU?
               </p>
               <p>
-                Thinker is a place where your identity isn't borrowed content. It's your actual thoughts. Your actual creativity. Your actual growth.
+                Thinkkr is a place where your identity isn't borrowed content. It's your actual thoughts. Your actual creativity. Your actual growth.
               </p>
               <p className="font-semibold text-foreground">
                 After 6 months, you'll have 200 submissions. Which identity would you be more afraid to lose?
@@ -31,7 +31,7 @@ export default function Vision() {
             <div className="relative aspect-square w-full overflow-hidden border border-foreground bg-secondary">
               <Image
                 src="/vision-mockup.png"
-                alt="Thinker portfolio mockup"
+                alt="Thinkkr portfolio mockup"
                 fill
                 className="object-cover"
               />

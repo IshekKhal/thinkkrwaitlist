@@ -3,7 +3,7 @@ export default function HowItWorks() {
     'Your addictive apps (Instagram, TikTok, YouTube) are blocked by default',
     'When you want scroll time, complete a ThinkIt challenge',
     'AI evaluates your work and rewards you with screen time',
-    'Your submission is published to your Thinker profile',
+    'Your submission is published to your Thinkkr profile',
     'Over time, you build an intellectual portfolio that becomes your new identity',
   ]
 
